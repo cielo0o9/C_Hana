@@ -1,0 +1,120 @@
+/* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap'); */
+/*     font-family: "IM Fell DW Pica SC", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Belgrano&display=swap');
+
+body{
+    font-family: "Belgrano", serif;
+    width: 80%; margin: 0 auto;
+}
+h1{
+    margin: 0; font-size: 30px; color: gray; padding: 15px 50% 15px 0;
+    position: relative;
+} 
+h1 a{
+    position: absolute; right: 0; bottom: 0; width: 50%; text-align: right;
+    color: forestgreen;
+}
+/* padding 50%와 width 50%가 같은 게 가장 중요 근데 이해를 잘 못 했음 복습할 것 */
+fieldset{
+    padding: 10px 40% 10px 0; position: relative; border-width: 2px 0 1px; border-style: solid none;
+    border-color: darkgreen;
+}
+fieldset input[type="search"]{
+    width: 20%; border: 1px solid forestgreen; background-color: palegreen; min-width: 115px;
+    line-height: 24px;
+}
+fieldset input[type="submit"]{
+    width: 10%; border: 2px solid limegreen; background-color: darkolivegreen; min-width: 60px;
+    line-height: 24px;
+}
+fieldset select{
+    position: absolute; right: 0; height: 25px; min-width: 150px; background-color: lightseagreen;
+    padding: 5px 0; border-color: lightskyblue;
+}
+h2{
+    padding: 30px 0; margin: 0; 
+}
+h2 strong{
+    color: seagreen;
+}
+h2 strong:not(:nth-of-type(2)){
+    text-transform: capitalize;
+}
+h2 strong:nth-of-type(2){
+    text-transform: uppercase;
+}
+/* 어뎁티브가 무엇인지 */
+/* 지금은 선택자 연습이라서 이런식으로 하는 거지만 실전에서는 클래스를 부여해서 컨트롤해야함 */
+ul{
+    margin: 0 0 30px; padding: 0; list-style: none;
+}
+ul li:first-child{
+    border-width: 3px 0 1px; border-style: solid none; border-color: darkgreen;
+    padding: 10px 0;
+}
+ul li:nth-child(2n){
+    background-color: #cacaca;
+}
+
+ul li:not(:first-child){
+    border-bottom: 1px solid mediumpurple; 
+    position: relative;
+}
+
+ul li::after{
+    content: ''; display: block; clear: both;
+}
+
+ul li span{
+    display: block; float: left; padding: 10px 2.5%; font-size: 14px;
+    word-break: break-all; 
+    /* delfault: normal인데 줄바꿈은 띄어쓰기를 기준으로 하기 때문에 띄어쓰기가 없으면 떨어지지 않음
+    그렇기 때문에 break-all로 해야함(한국어는 잘 사용 안 함) 
+    킵올 너비에 상관없이 한줄로 나옴 */
+}
+
+ul li span:nth-child(2){
+    width: 35%; 
+}
+
+ul li span:not(:nth-child(2)){
+    width: 15%;
+}
+ul li mark{
+    position: absolute; right: 0; top: 0; font-size: 9px; padding: 3px; background-color: rgba(127,255,0,0.4);
+    /* 최소 사이즈/권장 사이즈: 영문 - 9px/10px  한글 - 10px/12px*/
+}
+
+div:first-of-type{
+    max-width: 400px; margin: 0 auto; position: relative; line-height: 30px;
+}
+div:first-of-type a{
+    text-decoration: none; font-size: 14px; padding: 5px; display: block;
+}
+
+div:first-of-type > a{
+    position: absolute; top: 0;
+}
+
+div:first-of-type > a:first-of-type{
+    left: 0;
+}
+
+div:first-of-type > a:first-of-type{
+    right: 0;
+}
+
+div:first-of-type ol{
+    padding: 0 25px; margin: 0; text-align: center;
+}
+
+div:first-of-type ol li{
+    display: inline-block;
+}
+
+div:first-of-type ol li a:hover{
+    background-color: lightpink; color: darkmagenta;
+}
+
+/* 포지션을 쓸 때는 어떻게 해야지 0을 만들 수 있을지 고민해야함 */
+/* 이 예제에서 중요한 건 포지션에서 놓치면 안 되는 padding 개념임 */
