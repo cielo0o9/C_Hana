@@ -52,7 +52,8 @@
       + bold - 700
       + extraBold - 800
       + black - 900
-    - <line-height>: 줄간. 글자를 가로를 기준으로 반 나눠서 상하에 각각 적용 
+    - <line-height>: 줄간. 글자를 가로를 기준으로 반 나눠서 상하에 각각 적용
+      + 요소에 위 아래 padding을 부여한 것과 같은 효과를 줄 수 있음. 단, 줄바꿈이 일어나지 않는다는 확정이 있을 때만 사용하는 것이 좋음 
     - <letter-spacing>: 자간(글자). 공백에도 자간이 적용되는 어색한 부분이 있음
     - <word-spacing>: 단간(단어). 띄어쓰기 규칙이 latin어 개념과 다르기 때문에 국내 사용x
     - <white-space>: 공백, 줄바꿈, 탭 등의 공백 문자가 어떻게 처리될지 설정 가능
@@ -185,6 +186,7 @@
 
   > 2_float {float} http://127.0.0.1:5500/css/step_4/2_%20float.html
     - <float>: float는 width: 100%; 가 주어졌을 때 레이아웃이 예측 가능하고 가장 안정적 (step_4/2_3_floatLayout3)
+      + float를 사용했을 때 적용이 안 된다면 의심할 건 display밖에 없음.
     - <flaot>의 등장 배경
       + HTML과 CSS가 처음 등장했을 때 요소들은 기본적으로 위에서 아래로 쌓임
       + 하지만 웹 페이지를 디자인 할 때 이미지, 텍스트를 자연스럽게 배치하고자 하는 니즈가 많아서 float가 도입되었으나, 이후 레이아웃을 만드는 데도 사용되어 문제 발생 
@@ -334,4 +336,56 @@
     - 직접 실습
 
   > 1_4_selectorLogin http://127.0.0.1:5501/css/step_5/1_4_selectorLogin.html
+    - 웹 폰트 당기면 검사 computed 항목에서 렌더링된 것 확인할 것
+    - 핵스코드는 맨 앞자리 숫자가 중요. 앞자리 숫자가 커질수록 밝아짐
+      + 두 개 색상의 앞자리 숫자가 같다면 쓰지 않는 게 나음. 디자이너에게는 달라보일 수 있으나 사용자는 구별 불가
+    - <a>는 block으로 사용될 일이 많음 
+      + 클릭 가능한 영역 확대: inline 상태에서는 글자 부분만 클릭할 수 있지만, block으로 바꾸면 높이와 너비 지정으로 클릭 가능한 범위를 넓힐 수 있음
+    - 불필요한 코드는 작성하지 말 것
+    - 너비가 100%가 나오면 너비를 의심하지 말고 margin, padding, border를 의심해볼 것 
+    - input에게는 padding을 부여하는 것이 좋음. input 안에 커서가 붙어있으면 l과 1이 구별이 잘 안 되기 때문
+    - 팝업은 div로 작성하는 것이 좋으며 class를 지정하는 게 좋음
+      + 팝업은 보통 여러 개를 만들어야 하는 경우가 많은데 이름 지을 때 뒷단어로 통일한 후 $= 를 통해 속성을 부여하는 것이 좋음
   
+  > 1_5_selectorTraning http://127.0.0.1:5501/css/step_5/1_5_selectorTraning3.html
+    - 이용 약관 페이지 
+    - <resize>: 주로 textarea와 같은 HTML 요소의 크기를 사용자가 직접 조절할 수 있도록 하는 CSS 속성
+      + <none>: 크기 조절 불가능(고정됨)
+      + <both>: 가로&세로 크기 조절 가능
+      + <verticla>: 세로 크기만 조절 가능 
+      + <horizontal>:가로 크기만 조절 가능
+
+  > 1_6_selectorHW 
+    - inline 요소들끼리 정렬될 때 기본 4px의 margin이 부여되며 제거 불가능
+    - margin에 음수값도 적용 가능
+
+  트랜지션은 숫자일 때만 변화를 줄 수 있기 때문에 색 변화를 줄 때는 핵스코드로 작성해야함
+  프리셋으로하면 변환이 두 번 들어가기 때문에 시스템에 무리가 감
+
+  > 1_7_selectorfin http://127.0.0.1:5501/css/step_5/1_7_selectorlfin.html
+    - 초만 부여하게 되면 전체 모든 속성들에 촉수를 걸어
+
+  > 1_8_selectorHW2 http://127.0.0.1:5501/css/step_5/1_8_selectorHW2.html
+    - 1_7 복습 과제 
+    - 화면이 줄어도 요소가 떨어지지 않게 하려면 float를 이용해 배치해야하는 이유
+      + 궁극적으로는 요소들을 부모의 총 너비인 100%로 배치해야 안정적이기 때문
+      + 다른 것들을 사용해도 되지 않을까? 
+        + inline이나 inline-block 요소끼리는 기본적으로 4px의 margin을 가지고 있기 때문에 계산이 번잡해짐
+        + 또한 브라우저마다 기본 margin이 다름
+
+[step_6]
+  > 1_gradient http://127.0.0.1:5501/css/step_6/1_gradient.html
+    - <gradient>: 색의 점진적 이동
+      + <linear-gradient>: 선형
+      + <radial-gradient>: 원형 
+    - background: linear-gradient(135deg,#9b1f1f 0%, #ea7e7e 100%);
+      + 적용 광각 지정(deg), 색상의 위치(핀) 지정1, 2, 3 ... 
+      + 색상과 투명도 같이 지정
+      + 유사색 계열이 안정적이며 핀 설정이 많을수록 유연하고 부드러움
+      + 적용되지 않을 경우에 대한 대비용으로 background-color를 지정함함
+      
+  > 2_TRDuration http://127.0.0.1:5501/css/step_6/2_TRDuration.html
+    - <transition-duration> : 변환 - 지속 시간 = 변환하는 시간
+      + presetValue(ex. block, none, inline block, inline, relative, absolute)는 적용 불가
+      > event에 transition을 부여하면 편방향 액션이 되어 부자연스러움 
+      + transition에 초만 부여하게 되면 전체 모든 속성들에 촉수를 걸어두게 되어 시스템에 과부하를 주어 CPU에 무리가 가기 때문에 열 발생

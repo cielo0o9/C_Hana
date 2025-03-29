@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-/* 웹폰트 당기면 검사 computed 항목에서 렌더링된 확인할 것 */
 html{
     height: 100%;
 }
@@ -8,120 +7,70 @@ body{
     font-family: "Roboto Condensed", sans-serif;
     background-color: black;
 }
-
 div:first-of-type{
     width: 50%; height: 50%; background-color: #262626; 
     position: absolute; left: 25%; top: 25%; 
     min-height: 290px; max-height: 400px; 
 }
-
 div:first-of-type nav{
     margin-bottom: 25px; 
 }
-
 div:first-of-type nav ul{
     margin: 0; padding: 0; list-style: none;
-    /* ul은 마진과 패딩을 가지고 있음 */
 }
-
 div:first-of-type nav ul:after{
     display: block; content: ''; clear: both;
 }
-
 div:first-of-type nav ul li{
     float: left; width: 25%; background-color: #3a3a3a;
-    /* 핵스코드는 맨 앞자리 숫자가 중요. 앞자리 숫자가 커질수록 밝아짐. 앞자리가 같으면 쓰지 말 것*/
 }
-
 div:first-of-type nav ul li a{
     display: block; text-decoration: none; text-transform: 
     capitalize; text-align: center; font-size: 12px;
     padding: 10px 0; color: #ea0e52;
-    /* line-height는 줄바꿈이 일어나지 않는다는 확정이 있을 때만 */
-    /* a는 block으로 쓰일 일이 많음 */
-    /* javascript에서는 id class  둘 다 사용 가능하나 */
 }
-
 div:first-of-type nav ul li a:hover,
 div:first-of-type nav ul li.currentStat a{
     background-color: #ea0e52; color: white;
 }
-
 div:first-of-type h1{
     font-size: 14px; font-weight: 700; text-align: center; text-transform: capitalize;
     margin: 0 0 25px; color: white;
-    /* 가운데 정렬의 원리를 이해하고 불필요한 코드를 작성하지 말 것 */
 }
-
 div:first-of-type fieldset{
     border: none; padding: 0; width: 90%; margin: 0 auto 25px;
 }
-
 div:first-of-type fieldset ul{
     margin: 0; padding: 0;
 }
-
 div:first-of-type fieldset ul li{
-    display: block; 
-    /* float를 사용했는데 float가 안 된다면 의심할 건 display밖에 없음. 블록이여야만 적용 가능함 */
+    display: block;
 }
-
 div:first-of-type fieldset ul li::after{
     display: block; content: ''; clear: both;
 }
-
 div:first-of-type fieldset ul li *{
     display: block; float: left; line-height: 36px; font-size: 12px;
 }
-
 div:first-of-type fieldset ul li:first-child{
     margin-bottom: 25px;
 }
-
 div:first-of-type fieldset ul li label{
     width: 15%; text-align: center; background-color: #ea0e52; font-weight: bold;
 }
-
 div:first-of-type fieldset ul li input{
     width: 80%; padding: 0 2.5%; border: none;
-    /* 너비가 100%가 나오면 너비를 의심하지 말고 마진, 패딩, 볼더를 의심할 것 */
-    /* input 안에 커서가 붙어있으면 안 됨 소문자 L이나 1이 구분이 안 됨 그래서 패딩 줄 것 */
 }
-
 div:first-of-type fieldset ul li input:focus{
     background-color: #ea0e52;
 }
-
 div:first-of-type fieldset ul li input[type="password"]:focus{
     color: white;
 }
-
 div:first-of-type input[type="submit"]{
     width: 90%; margin: 0 auto; display: block; line-height: 36px; padding: 0;
     border: none; background-color: #3a3a3a; color: #ea0e52;
 }
-
 div:first-of-type input[type="submit"]:hover{
     background-color: #ea0e52; color: black; cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-팝업 코드에는 클래스를 지정해야함
-팝업은 보통 여러 개 만들어야 하는 경우가 많은데 이름 지을 때 뒷단어를 통일할 것
-ex. loginPanel, cartPanel > 뒷 선택자로 잡아야함
-팝업을 만들 때는 div로 작성해야함 
-별도 페이지로 만들 때는 nav와 h1을 사용해도 괜찮지만 팝업 형식이라면 수정해야함
-div의 연속성을 끊기 위해 fieldset을 사용한 것
-fieldset, ul, li가 없어도 만들 수 있어야 함 
-*/

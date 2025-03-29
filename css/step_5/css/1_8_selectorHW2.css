@@ -1,4 +1,4 @@
-/* body{
+body{
   width: 70%; margin: 0 auto; cursor: default;
 }
 ul, ol{
@@ -84,11 +84,9 @@ fieldset{
 }
 fieldset input[type="submit"]{
   border: 1px solid #9c33ff; color: #9c33ff; 
-} */
+}
 
-
-
-body{
+/* body{
   width: 70%; margin: 0 auto;
 }
 ul{
@@ -180,9 +178,4 @@ fieldset{
 fieldset input[type='submit']{
   border: 1px solid darkmagenta; background-color: lavender; color: darkmagenta;
   text-transform: uppercase;
-}
-
-/* 화면이 줄어도 떨어지지 않게 하려면 float를 통해 배치해야 하는 이유
-> 궁극적으로는 부모의 총 너비인 100%로 맞춰야 안정적으로 배치되기 때문임
-> 브라우저마다 인라인이나 인라인 블럭 요소끼리는 기본적으로 4px씩 떨어지기 때문에 
-block요소로 지정하고 float를 주는 게 나음   */
+} */

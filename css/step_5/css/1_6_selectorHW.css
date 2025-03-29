@@ -39,14 +39,11 @@ fieldset ul li input[type="checkbox"]:checked +label{
   font-size: 14px;
 }
 fieldset > input{
-  width: 45%; border: none; line-height: 36px; color: white; padding: 0;
+  width: 45%; border: none; line-height: 36px; color: white; padding: 0; margin: -4px;
 }
 fieldset input[type="submit"]{
   background-color: #242090; margin-right: 10%;
 }
 fieldset input[type="reset"]{
-  background-color: #902020; margin-left: -4px;
+  background-color: #902020;
 }
-
-/* 트랜지션은 숫자일 때만 변화를 즐 수 있기 때문에 색 변화를 줄 때는 핵스코드로 작성해야함 프리셋으로 하면 변환이 두 번 들어감 */
-/* 반응형 전 단계가 적응형 */

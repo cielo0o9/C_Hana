@@ -1,23 +1,15 @@
 .redG{
     background: #9b1f1f;
-    /* 적용 안 되었을 때 대비용 옛날 브라우저 */
     background: linear-gradient(135deg,#9b1f1f 0%, #ea7e7e 100%);
-    /* 적용광각 > 색상의 위치 지정(1, 2, 3 ...) */
-    /* deg  */
-    /* 그라디언트 색의이동 */
-    /* 색상과 동시에 투명과 같이 지정 */
-    /* gradient - 색의 점진적 이동= 유사색 계열이 안정적이며 핀 설정이 많을수록 유연하고 부드러움 */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b1f1f",end)
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b1f1f",end) */
 }
 [class$='G']:not(.yellowG){
     padding: 20px;
 }
-
 .greenG{
     background: #20a024;
     background: linear-gradient(to right, #20a024 0%, #71c46b 100%); 
 }
-
 .blueG{
     background: #1e5799;
     background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%); 
@@ -27,5 +19,3 @@
     background: #fefcea;
     background: radial-gradient(ellipse at center, #fefcea 0%, #f1da36 100%);
 }
-
-/* 제너레이터 참조 사이트 : http://www.colorzilla.com/gradient-editor */
