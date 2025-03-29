@@ -19,6 +19,19 @@
     - 개발자 질의 응답 사이트 : https://stackoverflow.com/
     - 달력 프레임워크 : https://jqueryui.com/datepicker/  
 
+[Github]
+    - github file create and push method
+        1. git config --global user.name "cielo"
+        2. git config --gloval user.email "ciel0o0q@gmail.com"
+        3. git init 
+        4. git remote add origin "repository 주소" (shift+insert로 붙여넣기)
+        5. git status
+        6. git add . 
+        7. git commit -m "커밋 메세지" / commit: local 저장소에 변경 사항을 저장하는 것
+        8. git push -u origin main / -u 제외 가능 / push: local에 저장된 commit을 원격 저장소(github)로 업로드
+
+
+
 [참고]
     - !(느낌표) 에밋 사용이 안 되는 경우 html:5를 통해 호출할 것
     - 숏핸드: 부모태그 > 자손태그 * 데이터 생성 개수{자손 태그 안의 공통된 문자$}

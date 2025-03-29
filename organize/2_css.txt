@@ -359,14 +359,29 @@
     - inline 요소들끼리 정렬될 때 기본 4px의 margin이 부여되며 제거 불가능
     - margin에 음수값도 적용 가능
 
-  트랜지션은 숫자일 때만 변화를 줄 수 있기 때문에 색 변화를 줄 때는 핵스코드로 작성해야함
-  프리셋으로하면 변환이 두 번 들어가기 때문에 시스템에 무리가 감
+
 
   > 1_7_selectorfin http://127.0.0.1:5501/css/step_5/1_7_selectorlfin.html
-    - 초만 부여하게 되면 전체 모든 속성들에 촉수를 걸어
+    - 이번 수업의 핵심 첫 번째: 부모와 자식 요소에게 각각 relative, absolute position을 부여할 때 부모의 padding과 자식의 width에 동일한 % 값을 부여해서 화면이 줄어도 서로에게 끼치는 영향을 최소화 해야 한다는 개념 
+      + 조건
+        1. h1{text}>a{blah}
+        2. <h1> position: relative; padding  +right: 50% 
+          + h1의 너비 기분 50%만큼 오른쪽에 padding 부여
+          + 즉, h1의 크기가 변하면 padding의 크기도 같이 변함
+        3. <a> position: absolute; right: 0; width: 50%
+          + a의 width는 부모의 50% 부여한 후 오른쪽에 붙임
+      + 부모의 padding과 자식의 width에 동일한 % 값을 부여해서 a가 h1의 teat를 침범하지 않도록 함
+    - 두 번째: 줄바꿈은 띄어쓰기를 기준으로 한다는 것
+      + <word-break>: text 줄바꿈 방식을 제어하는 tag
+        + <normal>: default값. 단어 단위로 줄바꿈
+        + <break-all>: 단어와 상관없이 줄바꿈 가능
+        + <keep-all>: 한글, 일본어, 중국어는 단어 단위로 줄바꿈하고, 영어는 단어가 깨지지 앟도록 유지(너비에 상관없이 한 줄로 나옴)
+    - <font-size>의 최소 사이즈 / 권장 사이즈 
+      + 영문: 9px / 10px
+      + 한글: 10px / 12px
 
-  > 1_8_selectorHW2 http://127.0.0.1:5501/css/step_5/1_8_selectorHW2.html
-    - 1_7 복습 과제 
+
+  > 1_8_selectorHW2 {1_7 복습 과제} http://127.0.0.1:5501/css/step_5/1_8_selectorHW2.html
     - 화면이 줄어도 요소가 떨어지지 않게 하려면 float를 이용해 배치해야하는 이유
       + 궁극적으로는 요소들을 부모의 총 너비인 100%로 배치해야 안정적이기 때문
       + 다른 것들을 사용해도 되지 않을까? 
@@ -387,5 +402,7 @@
   > 2_TRDuration http://127.0.0.1:5501/css/step_6/2_TRDuration.html
     - <transition-duration> : 변환 - 지속 시간 = 변환하는 시간
       + presetValue(ex. block, none, inline block, inline, relative, absolute)는 적용 불가
-      > event에 transition을 부여하면 편방향 액션이 되어 부자연스러움 
+      + event에 transition을 부여하면 편방향 액션이 되어 부자연스러움 
       + transition에 초만 부여하게 되면 전체 모든 속성들에 촉수를 걸어두게 되어 시스템에 과부하를 주어 CPU에 무리가 가기 때문에 열 발생
+      + transition은 값이 숫자일 때만 변화를 줄 수 있기 때문에 transition을 사용할 때는 핵스코드로 작성해야 함
+      + preset 값을 부여하게 되면 변환이 두 번 필요하기 때문에 시스템에 무리를 줌
