@@ -14,10 +14,14 @@
     - ctrl + F : 파일 내 단어 찾기 및 수정
 
 [참조 사이트]
-    - 텍스트 참조 사이트 : https://lipsum.com/
-    - mdn 언어 창조 사이트 : https://developer.mozilla.org/ko/ 
-    - 개발자 질의 응답 사이트 : https://stackoverflow.com/
-    - 달력 프레임워크 : https://jqueryui.com/datepicker/  
+    - 텍스트 참조 사이트: https://lipsum.com/
+    - mdn 언어 창조 사이트: https://developer.mozilla.org/ko/ 
+    - 개발자 질의 응답 사이트: https://stackoverflow.com/
+    - 달력 프레임워크: https://jqueryui.com/datepicker/ 
+    - google font: https://fonts.google.com/
+    - google icon: https://fonts.google.com/icons
+    - 제너레이터 참조 사이트: http://www.colorzilla.com/gradient-editor
+    - cubic-bezier 커스텀 사이트: https://cubic-bezier.com/#.17,.67,.83,.67
 
 [Github]
     - github file create and push method
@@ -29,8 +33,6 @@
         6. git add . 
         7. git commit -m "커밋 메세지" / commit: local 저장소에 변경 사항을 저장하는 것
         8. git push -u origin main / -u 제외 가능 / push: local에 저장된 commit을 원격 저장소(github)로 업로드
-
-
 
 [참고]
     - !(느낌표) 에밋 사용이 안 되는 경우 html:5를 통해 호출할 것
@@ -62,8 +64,12 @@
     - CI와 BI를 구분할 것
 
     - font 당기는 방법
-      1. google font에서 원하는 font 바구니에 담고 제공되는 import url 복사
-      2. @import url('') 사용
-      3. 원하는 요소에 font family 속성 사용
+    > https://fonts.google.com/
+        1. 원하는 font 바구니에 담고 제공되는 import url 복사
+        2. @import url('') 사용
+        3. 원하는 요소에 font family 속성 사용
 
     - icon 당기는 방법
+    > https://fonts.google.com/icons
+        1. 원하는 icon 선택 후 web <style> code 복사 붙여넣기
+        2. 사용하고자하는 tag에 Inserting the icon code 복사 붙여넣기

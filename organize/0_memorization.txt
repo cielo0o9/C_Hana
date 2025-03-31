@@ -25,3 +25,15 @@
   - 100/14 = 7.14
   - 100/15 = 6.66
   - 100/16 = 6.25
+
+[margin과 padding을 가진 요소들(레이아웃 구성에 영향)]
+  - <body>: margin-top/bottom: 8px;
+  - <h1>~<h6>: margin-top/bottom: em단위(약 16px~36px)
+  - <p>: margin-top/bottom: 16px;
+  - <ul>,<ol>: margin-top/bottom: 16px; padding-left: 40px;(목록 item 들여쓰기를 위한 여백)
+  - <blockquote>: margin-top/bottom: 16px; padding-left: 40px;(인용문을 구분짓기 위한 여백)
+  - <hr>: margin-top/bottom: 16px;
+  - <input>: padding: 2px 4px;
+  - <textarea>: padding: 4px;
+  - <button>: padding: 4px 12px;
+  - inline 요소끼리는 기본 4px의 간격이 생기며, 이는 브라우저마다 상이함

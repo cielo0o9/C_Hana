@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+.property{
+    width: 610px; margin: 0 auto; border: 3px solid blue;
+}
+.property span{
+    display: block; width: 10px; height: 50px; margin: 10px;
+    /* transition-property: width, background-color;
+    transition-duration: 5s, 1s;
+    transition-timing-function: linear, ease-out;
+    transition-delay: 1s, 1s; */
+    transition: all 0.5s ease-out;
+}
+.property:hover span:nth-child(1){width: 100px; background-color: deeppink;}
+.property:hover span:nth-child(2){width: 200px; background-color: deepskyblue;}
+.property:hover span:nth-child(3){width: 300px; background-color: darkgoldenrod;}
+.property:hover span:nth-child(4){width: 200px; background-color: darkgray;}
+.property:hover span:nth-child(5){width: 500px; background-color: darkred;}

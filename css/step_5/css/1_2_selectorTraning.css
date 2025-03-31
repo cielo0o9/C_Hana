@@ -1,34 +1,24 @@
 body{
     margin: 0;
 }
-
 article{
     margin-bottom: 30px; max-width: 1000px;
 }
-
-/* 최대 너비/최소너비 */
-
 article::after{
     content: ''; display: block; clear: both;
 }
-
 article > :first-child{
-    /* >를 안쓰면 article 내 모든 직계 자손들을 특정함 */
     float: left; font-size: 100px;
     width: 150px; line-height: 110px; text-align: right; 
     background-color: gray; color: white;
     margin: 0 20px 10px 0;
-    /* em 유동성 단위 h의 margin은 em 단위를 가지고 있기 때문에 공간이 벌어짐*/
 }
-
 article p{
     font-size: 14px;
 }
-
 article p :first-child{
     color: aqua; background-color: transparent;
 }
-
 article p :first-child:not(mark){
     text-decoration: underline;
 }

@@ -1,12 +1,12 @@
 [step_1]
 
-  > 1_H {heading - 제목} http://127.0.0.1:5500/HTML/step1/1_H.html
+  > 1_H {heading - 제목}
     - <h1>: Logo
     - <h2>: phragraph Title
     - <h3>: subDescription Title
     - <h4> ~ <h6>: description Title
 
-  > 2_P {paragraph(문단), 문자 style tag} http://127.0.0.1:5500/HTML/step1/2_P.html
+  > 2_P {paragraph(문단), 문자 style tag}
     - <p>
     - <br> : 줄바꿈
       + 웹 브라우저 사이즈의 압박을 받을 경우 부자연스러운 구조가 되기 때문에 사용 지양
@@ -28,7 +28,7 @@
 
 [step_2]
 
-  > 1_list {list Tag's} http://127.0.0.1:5500/HTML/step2/1_list.html
+  > 1_list {list Tag's}
     - <ul> : 번호 없는 목록 / display: block
     - <li type="circle"> : display: list-item
     - <li type="disc"> : default 상태
@@ -43,11 +43,11 @@
     - <dt> : 정의할 단어
     - <dd> : 정의할 단어에 대한 설명
 
-  > 2_img {img tag} http://127.0.0.1:5500/HTML/step2/2_img.html
+  > 2_img {img tag}
     - <img src="https://placehold.co/150" alt="임시 이미지 공간">
     + alt(alternate Text) :시각 장애인들에게 사진 정보를 전달하기 위함. 최대 자수는 255자 권장. 이상 초과될 때는 figure / figcaption 으로 사용할 것 
 
-  > 3_video, audio {video, audio Tag's} http://127.0.0.1:5500/HTML/step2/3_video.html
+  > 3_video, audio {video, audio Tag's}
     - <iframe> : 특정 웹페이지를 현재 페이지 안에 삽입할 때 사용
       + css 스타일링에도 유연하고 보안 설정이 가능해서 더 많이 쓰임
       + youtube 영상 불러오기: 공유 > 퍼가기 > 코드 복사
@@ -66,7 +66,7 @@
 
 [step_3]
 
-  > 1_hyperlink {Hyper link} http://127.0.0.1:5500/HTML/step3/1_hyperlink.html
+  > 1_hyperlink {Hyper link}
     - <a href="">
       + <a href="" target="_self"> : 이동 기능 / a의 target default
       + <a href="" target="_blank"> : 이동 기능 / 웹 페이지를 분리 시킴
@@ -75,12 +75,12 @@
       + <a href="tel:+821049659751"> : 전화 걸기
       + <a href="#targetAnchor"> : id를 지정해 목표 지점 바로 가기 
 
-  > 2_namedAnchor {namedAnchor} http://127.0.0.1:5500/HTML/step3/2_namedAnchor.html
+  > 2_namedAnchor {namedAnchor}
     - <ul>, <li>, <a> tag와 id를 통해 슬라이더 느낌의 페이지 바로가기 구현 
 
 [step_4]
 
-  > 1_table {table} http://127.0.0.1:5500/HTML/step4/1_table.html
+  > 1_table {table} 
     - <table> : 표 선언의 의미
     - <caption> : 표의 제목 
     - <colgroup> : 열 그룹
@@ -91,15 +91,15 @@
     - <tr> : table row 하나의 행. 가로줄을 만듦
     - <td> : table data 하나의 열. 일반적인 데이터 셀을 의미
 
-  > 2_table_span {colspan, rowspan} http://127.0.0.1:5500/HTML/step4/2_table_span.html
+  > 2_table_span {colspan, rowspan}
     - <td colspan="2"> : 열을 2만큼 병합
     - <td rowspan="3"> : 행을 3만큼 병합
 
-  > 3_table_spanHW {table_spanHW} http://127.0.0.1:5500/HTML/step4/3_%20table_spanHW.html
+  > 3_table_spanHW {table_spanHW}
 
 [step_5]
 
-  > 1_form {form Tag's} http://127.0.0.1:5500/HTML/step5/1_form.html
+  > 1_form {form Tag's}
     - <form>: input 내 사용자 데이터들을 담아서 서버로 전송 / 추상적인 공간
     - <fieldset>: 폼 요소들을 그룹화할 때 사용 (서로 다른 두 개 이상의 data group이 존재할 때 물리적 공간 구분 용도로 사용) / 실제 공간
     - <legend>: 분리된 fieldset group 주제에 맞는 이름을 적는 tag(필수x)
@@ -158,14 +158,14 @@
           + 브라우저 기본 스타일 유지 / CSS로 자유롭게 스타일링 가능
           + input은 단순한 클릭 기능 / button은 내부에 다양한 요소를 넣을 수 있음
 
-  > 2_formHW {formHW} http://127.0.0.1:5500/HTML/step5/2_formHW.html
+  > 2_formHW {formHW} 
     - table을 이용해서 form을 작성
     - 눈에 보이지 않지만 col이 잘 맞아야함. 그렇지 않으면 구조가 깨지는 것
     - table 실습을 많이 해볼 것
 
 [step_6]
 
-  > 1_HTML5_addTag {HTML5에 새로 추가된 Tag} http://127.0.0.1:5500/HTML/step6/1_HTML5_addTag.html
+  > 1_HTML5_addTag {HTML5에 새로 추가된 Tag} 
     - <figure>: img가 주체가 되는 설명글(figcaption)만을 사용하는 확정구조 
     + 원래는 상징적인 것들에만 사용했는데 그렇게 되면 사용량이 떨어져서 조금 더 광범위하게 사용해도 됨
     - <figcaption>: image 설명글
@@ -196,10 +196,10 @@
     - <dialog>: 모달 창(팝업 대화 상자를 만들 떄 사용)
       + 닫기 전까지 배경과 상호작용이 불가
 
-  > 2_divSpan {div layout(web 2.0 Layout)} http://127.0.0.1:5500/HTML/step6/2_divSpan.html
+  > 2_divSpan {div layout(web 2.0 Layout)}
     - semantic tag를 이용한 layout
 
-  > 3_semantic {semantic Tag's} http://127.0.0.1:5500/HTML/step6/3_semantic.html
+  > 3_semantic {semantic Tag's} 
     - <header>: 모든 페이지에서 공통으로 사용하는 상단 영역(global)
     - <nav>: navigation의 약자. (주)메뉴 등급에 해당하는 메뉴 그룹
     - <section>: 웹페이지의 논리적인 구역을 나누는 용도로 사용
