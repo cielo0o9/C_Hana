@@ -1,17 +1,26 @@
 body{
     margin: 0;
 }
+
 .circle{
     position: absolute; width: 200px; height: 200px; border-radius: 100px;
     background: linear-gradient(to bottom, #7db9f8 0%, #1e5799 100%);
     animation-name: moveCircle; animation-duration: 2s; 
     animation-direction: alternate;
+    /* animation-timing-function: cubic-bezier(0,.51,.99,1); */
     animation-timing-function: cubic-bezier(ease-out);
     animation-iteration-count: infinite;
+    /* default: normal > 
+    reverce > 되감기 100에서 0을 가게 만들어줌
+    alternate > 왕복인데 되돌아올 힘을 부여해야함 animation-iteration-count 몇 번 반복할 것인지 
+    */
 }
+
 .circle:hover{
     animation-play-state: paused;
+    /* default: running / paused */
 }
+
 @keyframes moveCircle{
     /* 0%{
         left: 0;
@@ -24,8 +33,14 @@ body{
     } */
     0%{
         left: 0; transform: rotate(0deg);
+        /* css 중에 가장 많은 속성값을 가지고 있음 */
+        /* 트랜지션 때문에 애니메이션이 무거워짐 */
+        /* matrix() > 한번 확인해볼 것 */
     }
     100%{
         left: 800px; transform: rotate(360deg);
     }
 }
+
+/* 불러서 사용하기 위한 용도로 이름 부여 */
+/* 트랜지션보다 키프레임이 무거움 */

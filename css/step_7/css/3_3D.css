@@ -1,11 +1,9 @@
 body{
     width: 200px; margin: 200px auto;
 }
-
 .rotate{
     width: 200px; height: 200px;
 }
-
 .rotate span{
     display: block; height: 200px; animation-iteration-count: infinite;
     animation-duration: 3s; animation-timing-function: ease; 
@@ -42,9 +40,11 @@ body{
 }
 @keyframes rotate3D{
     0%{
-        transform: ;
+        transform: rotate3D(1,1,1,0deg);
+        /* transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); */
     }
     100%{
-        transform: ;
+        transform: rotate3D(1,1,-1,360deg);
+        /* transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); */
     }
 }
