@@ -1,7 +1,7 @@
 [개발 환경]
     1. chrome 검색 > 설치 > 기본 브라우저 설정
     2. vscode 검색 > 설치 > (next*3 finish)
-    3. 자동 한글변환 => 안됭 떄 좌측 5번째 icon(extension)을 눌러서 korean 검색 후 설치
+    3. 자동 한글변환 => 안될 때 좌측 5번째 icon(extension)을 눌러서 korean 검색 후 설치
     4. theme material icom theme, color the tag name 설치
     5. live server 검색 후 설치
 
@@ -25,14 +25,23 @@
 
 [Github]
     - github file create and push method
-        1. git config --global user.name "cielo"
-        2. git config --gloval user.email "ciel0o0q@gmail.com"
-        3. git init 
-        4. git remote add origin "repository 주소" (shift+insert로 붙여넣기)
-        5. git status
-        6. git add . 
-        7. git commit -m "커밋 메세지" / commit: local 저장소에 변경 사항을 저장하는 것
-        8. git push -u origin main / -u 제외 가능 / push: local에 저장된 commit을 원격 저장소(github)로 업로드
+        > 터미널 생성 (Ctrl + shift + `)
+        > 터미널 열기 (Ctrl + `) 
+        > 명령어 입력 
+            - 초기 세팅
+                - git config --global user.name "cielo"
+                - git config --gloval user.email "ciel0o0q@gmail.com"
+            - 저장소 관련    
+                - git init: 현재 폴더를 git 저장소로 만드는 명령어
+                - git remote add origin "repository 주소" : 원격 저장소 연결 (주소 shift+insert로 붙여넣기) 
+                - git remote -v : 연결된 원격 저장소 확인
+                - git push origin <브랜치명> : git에 업로드
+                - git pull origin <브랜치명> : git에서의 변경사항 가져오기
+            - 주요 명령어 
+                - git status : 현재 git 상태 확인(추가할 파일, 커밋할 파일)
+                - git add . or 파일명 : 파일 커밋할 준비
+                - git log : 커밋 로그 확인
+                - git commit -m "커밋 메세지" : commit(local 저장소에 변경 사항을 저장하는 것)
 
 [참고]
     - !(느낌표) 에밋 사용이 안 되는 경우 html:5를 통해 호출할 것
