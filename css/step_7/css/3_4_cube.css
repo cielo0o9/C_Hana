@@ -1,0 +1,47 @@
+/* perspective 원근의 의미로 사용됨 
+    대상 면적의 2배 정도가 최대수치 
+    절대적 최대 수치는 출력 해상도에 따라 달라짐
+    ex. 1920 > 2000px limit
+    너비와 높이의 총 합을 넘어갈 수 없음
+*/
+
+body{
+    width: 200px; margin: 200px auto; perspective: 200px;
+}
+div{
+    width: 200px; height: 200px; position: relative; 
+    transform-style: preserve-3d;
+    animation: playbox 3s linear infinite;
+    /* animation: [keyframs] [duration] [timing-function] [delay] [iteration-count] */
+}
+
+div:hover span{
+    backface-visibility: visible;
+}
+
+@keyframes playbox{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        /* 스트링처리 굳이 안 해도 됨 */
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+div span{
+    width: 200px; height: 200px; position: absolute; left: 0; top: 0; opacity: 0.7;
+    backface-visibility: hidden;
+}
+
+div span:nth-last-of-type(1){background-color: red; transform: rotateY(0deg) translateZ(100px);}
+div span:nth-last-of-type(2){background-color: green; transform: rotateY(90deg) translateZ(100px);}
+div span:nth-last-of-type(3){background-color: blue; transform: rotateY(180deg) translateZ(100px);}
+div span:nth-last-of-type(4){background-color: cyan; transform: rotateY(270deg) translateZ(100px);}
+div span:nth-last-of-type(5){background-color: magenta; transform: rotateX(90deg) translateZ(100px);}
+div span:nth-last-of-type(6){background-color: yellow; transform: rotateX(270deg) translateZ(100px);}
+
+/* 각도가 같지 회전 반경은 다름 
+div로 감싸는 이유 
+돌아가는 아이들을 한번에 잡아서 움직이게 하는 것
+*/
