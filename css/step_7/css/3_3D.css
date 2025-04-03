@@ -9,11 +9,15 @@ body{
     animation-duration: 3s; animation-timing-function: ease; 
 }
 
-.rotate span:nth-of-type(1){background-color: red; animation-name: hori;}
-.rotate span:nth-of-type(2){background-color: green; animation-name: veti;}
-.rotate span:nth-of-type(3){background-color: blue; animation-name: depth;}
-.rotate span:nth-of-type(4){background-color: yellow; animation-name: rotate3D;}
+.rotate span:nth-of-type(1){background: linear-gradient(to bottom, #ffffff 0%, #f00 100%); animation-name: hori;}
+.rotate span:nth-of-type(2){background: linear-gradient(to right, #ffffff 0%, #0f0 100%); animation-name: veti;}
+.rotate span:nth-of-type(3){background: linear-gradient(to right, #ffffff 0%, #0000ff 100%); animation-name: depth;}
+.rotate span:nth-of-type(4){background: linear-gradient(rgb(255, 255, 255) 0%, #fF0 100%); animation-name: rotate3D;}
 
+
+.rotate span:hover{
+    animation-play-state: paused;
+}
 @keyframes hori{
     0%{
         transform: rotateX(0deg);
@@ -48,3 +52,4 @@ body{
         /* transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); */
     }
 }
+

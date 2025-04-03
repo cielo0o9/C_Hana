@@ -3,32 +3,74 @@ body{
 }
 
 div{
-  width: 200px; position: relative; animation-name: rotate3D; animation-iteration-count: infinite;
-  animation-duration: 3s; animation-timing-function: cubic-bezier(0.5,0,0.3,1);
+  width: 200px; position: relative; 
+  animation-name: rotate3D; 
+  /* animation-iteration-count: infinite; */
+  animation-duration: 3s; 
+  animation-timing-function: ease;
   transform-style: preserve-3d;
-  /* flat이 디폴트값  preserve 가 스위치를 키는 것*/
+}
+
+div:hover{
+  animation-play-state: paused;
 }
 
 @keyframes rotate3D{
-  /* 키프레임은 100개 정도 사용할 수 있다고 생각하면 됨 원래 10000개 지원 */
   0%{
       transform: rotateX(90deg) rotateY(45deg);
   }
   100%{
       transform: rotateX(450deg) rotateY(45deg);
   }
-  /* 한번에 다 하려고 하지 말고 하나하나 차근차근 */
 }
 
-div span{
+ div span{
   width: 200px; height: 100px; position: absolute; left: 0; top: 0;
 }
 
-div :nth-child(1){background-color: red; animation-name: rotate3D;}
-div :nth-child(2){background-color: green; transform-origin: right top; animation-name: rotate3D; transform: rotateY(-90deg);}
-div :nth-child(3){background-color: blue; animation-name: rotate3D;
-transform: translateZ(-200px);}
-div :nth-child(4){background-color: yellow; transform-origin: left top; animation-name: rotate3D;
-transform: rotateY(90deg);}
+/*
+div :nth-child(1){
+  background-color: red; animation-name: rotate3D;
+}
+div :nth-child(2){
+  background-color: green; animation-name: rotate3D; 
+  transform-origin: right top; transform: rotateY(-90deg);
+}
+div :nth-child(3){
+  background-color: blue; animation-name: rotate3D;
+  transform: translateZ(-200px);
+}
+div :nth-child(4){
+  background-color: yellow; animation-name: rotate3D;
+  transform-origin: left top; transform: rotateY(90deg);
+}
+div :nth-child(5){
+  background-color: purple; animation-name: rotate3D;
+  transform-origin: top; transform: rotateX(-90deg);
+  height: 200px;
+}
+div :nth-child(6){
+  background-color: pink; animation-name: rotate3D;
+  transform-origin: bottom; transform: rotateX(90deg);} */
 
-/* 브라우저는 항상 트랜스폼을 켜놓지 않기 때문에  */
+
+  div :nth-child(1){
+    background-color: red; transform: translateZ(100px); animation-name: rotate3D;
+  }
+  div :nth-child(2){
+    background-color: green; transform: rotateY(90deg) translateZ(100px); animation-name: rotate3D;
+  }
+  div :nth-child(3){
+    background-color: blue; transform: rotateY(180deg) translateZ(100px); animation-name: rotate3D;
+  }
+  div :nth-child(4){
+    background-color: yellow; transform:rotateY(270deg) translateZ(100px); animation-name: rotate3D;
+  }
+  div :nth-child(5){
+    background-color: purple; transform: rotateX(90deg) translateZ(100px); animation-name: rotate3D;
+    height: 200px;
+  }
+  div :nth-child(6){
+    background-color: pink; transform:rotateX(270deg); animation-name: rotate3D;
+    height: 200px;
+  }
